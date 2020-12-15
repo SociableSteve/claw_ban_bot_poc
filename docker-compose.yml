@@ -9,12 +9,12 @@ services:
     volumes:
       - .:/src
     command: yarn dev
+    environment:
+      - MONGO_URI=mongodb://p4nth3rb0t:supersecretpassword@mongo:27017/banbot
 
   mongo:
     image: mongo
     restart: always
-    ports:
-      - 27017:27017
     environment:
       MONGO_INITDB_ROOT_USERNAME: p4nth3rb0t
       MONGO_INITDB_ROOT_PASSWORD: supersecretpassword

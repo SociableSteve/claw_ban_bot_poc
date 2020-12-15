@@ -1,7 +1,6 @@
 import * as mongoose from "mongoose";
 
-const url: string =
-  process.env.MONGO_URI || "mongodb://root:example@mongo:27017/banbot";
+const url: string = process.env.MONGO_URI;
 console.log(url);
 mongoose
   .connect(url, {
